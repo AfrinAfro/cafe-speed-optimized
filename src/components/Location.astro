@@ -1,124 +1,159 @@
+---
+---
+
 <section
-  id="contact"
+  id="location"
   class="bg-[#f5f1ea] px-6 py-24 sm:py-32 lg:px-8"
 >
-  <div class="mx-auto max-w-7xl">
-    <div
-      class="overflow-hidden rounded-[2rem] bg-stone-900 text-white"
-    >
-      <div class="grid lg:grid-cols-2">
+  <div
+    class="mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] bg-[#171514] text-white lg:grid-cols-2"
+  >
+    <!-- Content -->
+    <div class="flex flex-col justify-center px-8 py-12 sm:px-12 sm:py-16 lg:px-14 lg:py-20">
 
-        <!-- Information -->
-        <div class="p-8 sm:p-12 lg:p-16">
-          <p
-            class="text-xs font-medium uppercase tracking-[0.3em] text-amber-300/70"
-          >
-            Find us
-          </p>
+      <p
+        class="text-[10px] font-medium uppercase tracking-[0.3em] text-amber-300"
+      >
+        Find us
+      </p>
 
-          <h2
-            class="mt-5 max-w-lg text-4xl font-medium leading-tight tracking-[-0.035em] sm:text-5xl"
-          >
-            Your next coffee
-            <span class="font-serif italic text-amber-200">
-              is waiting.
-            </span>
-          </h2>
+      <h2
+        class="mt-5 max-w-md text-4xl font-medium leading-[1.05] tracking-[-0.04em] sm:text-5xl"
+      >
+        Your next coffee is
+        <span class="font-serif italic text-amber-200">
+          waiting.
+        </span>
+      </h2>
 
-          <p class="mt-6 max-w-md text-sm leading-7 text-white/50">
-            Drop by for a quiet morning, an afternoon catch-up or simply a
-            beautifully crafted cup of coffee.
-          </p>
+      <p
+        class="mt-6 max-w-md text-sm leading-7 text-white/45"
+      >
+        Drop by for a quiet morning, an afternoon catch-up or simply a
+        beautifully crafted cup of coffee.
+      </p>
 
-          <div class="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-1">
-
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.25em] text-white/30">
-                Location
-              </p>
-
-              <p class="mt-2 text-sm leading-6 text-white/80">
-                Downtown Dubai<br />
-                Dubai, United Arab Emirates
-              </p>
-            </div>
-
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.25em] text-white/30">
-                Opening hours
-              </p>
-
-              <p class="mt-2 text-sm leading-6 text-white/80">
-                Monday — Sunday<br />
-                7:00 AM — 12:00 AM
-              </p>
-            </div>
-
-          </div>
-
-          <div class="mt-10 flex flex-wrap gap-3">
-            <a
-              href="https://maps.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-medium text-stone-950 transition hover:bg-amber-100"
-            >
-              Get Directions
-            </a>
-
-            <a
-              href="tel:+971000000000"
-              class="inline-flex items-center rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/5"
-            >
-              Call Us
-            </a>
-          </div>
-        </div>
-
-        <!-- Visual -->
-        <div
-          class="relative min-h-[380px] overflow-hidden border-t border-white/10 bg-gradient-to-br from-stone-800 via-stone-900 to-black lg:min-h-full lg:border-l lg:border-t-0"
+      <!-- Location -->
+      <div class="mt-9">
+        <p
+          class="text-[9px] uppercase tracking-[0.25em] text-white/30"
         >
-          <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(217,119,6,0.22),transparent_30%)]"
-          ></div>
+          Location
+        </p>
 
-          <!-- Minimal map-inspired visual -->
-          <div class="absolute inset-8 rounded-[1.5rem] border border-white/10">
-            <div class="absolute left-[20%] top-[28%] h-px w-[60%] rotate-[20deg] bg-white/10"></div>
+        <address
+          class="mt-3 not-italic text-sm leading-6 text-white/80"
+        >
+          Downtown Dubai<br />
+          Dubai, United Arab Emirates
+        </address>
+      </div>
 
-            <div class="absolute left-[10%] top-[55%] h-px w-[75%] -rotate-[14deg] bg-white/10"></div>
+      <!-- Hours -->
+      <div class="mt-7">
+        <p
+          class="text-[9px] uppercase tracking-[0.25em] text-white/30"
+        >
+          Opening hours
+        </p>
 
-            <div class="absolute left-[35%] top-[15%] h-[75%] w-px rotate-[25deg] bg-white/10"></div>
+        <p class="mt-3 text-sm leading-6 text-white/80">
+          Monday — Sunday<br />
+          7:00 AM — 12:00 AM
+        </p>
+      </div>
 
-            <div class="absolute bottom-[25%] right-[20%] h-px w-[45%] rotate-[65deg] bg-white/10"></div>
+      <!-- Actions -->
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Downtown%20Dubai%2C%20Dubai%2C%20United%20Arab%20Emirates"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full bg-white px-5 py-3 text-xs font-medium text-stone-900 transition hover:bg-amber-100"
+        >
+          Get Directions
+        </a>
 
-            <!-- Location marker -->
-            <div
-              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            >
-              <div
-                class="flex h-14 w-14 items-center justify-center rounded-full bg-amber-300 text-stone-950 shadow-[0_0_0_12px_rgba(252,211,77,0.08)]"
-              >
-                <span class="text-lg">✦</span>
-              </div>
+        <a
+          href="#contact"
+          class="rounded-full border border-white/15 px-5 py-3 text-xs font-medium text-white transition hover:border-white/30 hover:bg-white/5"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
 
-              <div
-                class="mt-4 rounded-full border border-white/10 bg-black/50 px-4 py-2 text-center text-[10px] uppercase tracking-[0.2em] text-white/60 backdrop-blur-md"
-              >
-                Café Lumière
-              </div>
-            </div>
-          </div>
+    <!-- Map visual -->
+    <div class="relative min-h-[420px] overflow-hidden bg-[#11100f] lg:min-h-[620px]">
 
-          <div class="absolute bottom-7 left-7">
-            <p class="text-[10px] uppercase tracking-[0.3em] text-white/30">
-              Dubai · UAE
-            </p>
-          </div>
+      <!-- Ambient glow -->
+      <div
+        class="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-700/10 blur-[90px]"
+      ></div>
+
+      <!-- Map lines -->
+      <div class="absolute inset-0 opacity-40">
+        <div
+          class="absolute left-[8%] top-[18%] h-px w-[80%] rotate-[18deg] bg-white/10"
+        ></div>
+
+        <div
+          class="absolute left-[5%] top-[62%] h-px w-[90%] rotate-[-13deg] bg-white/10"
+        ></div>
+
+        <div
+          class="absolute left-[20%] top-[80%] h-px w-[70%] rotate-[63deg] bg-white/10"
+        ></div>
+
+        <div
+          class="absolute left-[40%] top-[5%] h-px w-[70%] rotate-[110deg] bg-white/10"
+        ></div>
+
+        <div
+          class="absolute left-[15%] top-[40%] h-px w-[75%] rotate-[-35deg] bg-white/10"
+        ></div>
+      </div>
+
+      <!-- Location marker -->
+      <div
+        class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center"
+      >
+        <div
+          class="absolute h-28 w-28 animate-pulse rounded-full bg-amber-400/10"
+        ></div>
+
+        <div
+          class="absolute h-20 w-20 rounded-full border border-amber-300/20 bg-amber-400/10"
+        ></div>
+
+        <div
+          class="relative flex h-12 w-12 items-center justify-center rounded-full bg-amber-300 text-stone-950 shadow-[0_0_40px_rgba(251,191,36,0.35)]"
+        >
+          <span class="text-sm">✦</span>
+        </div>
+      </div>
+
+      <!-- Location label -->
+      <div
+        class="absolute bottom-7 left-7 right-7 flex items-end justify-between"
+      >
+        <div>
+          <p class="text-[9px] uppercase tracking-[0.25em] text-white/30">
+            Café Lumière
+          </p>
+
+          <p class="mt-2 text-xs text-white/60">
+            Downtown Dubai
+          </p>
         </div>
 
+        <span
+          class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white/40"
+        >
+          Dubai · UAE
+        </span>
       </div>
+
     </div>
   </div>
 </section>

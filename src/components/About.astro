@@ -1,105 +1,88 @@
+---
+import { Image } from "astro:assets";
+import aboutImage from "../assets/images/about.png";
+---
+
 <section id="story" class="bg-[#f5f1ea] px-6 py-24 sm:py-32 lg:px-8">
   <div class="mx-auto max-w-7xl">
-    <div class="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-      <!-- Text -->
-      <div>
+      <!-- Image -->
+      <div class="relative overflow-hidden rounded-[2rem]">
+        <Image
+          src={aboutImage}
+          alt="Warm and inviting interior of Café Lumière"
+          width={1536}
+          height={1024}
+          loading="lazy"
+          decoding="async"
+          class="h-[420px] w-full object-cover sm:h-[520px] lg:h-[640px]"
+        />
+
+        <!-- Small decorative label -->
+        <div
+          class="absolute bottom-5 left-5 rounded-full border border-white/20 bg-black/30 px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-white backdrop-blur-md"
+        >
+          Café Lumière · Dubai
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="lg:pl-4">
+
         <p
           class="text-xs font-medium uppercase tracking-[0.3em] text-amber-800"
         >
-          Our Story
+          Our story
         </p>
 
         <h2
-          class="mt-5 max-w-xl text-4xl font-medium leading-tight tracking-[-0.035em] text-stone-900 sm:text-5xl lg:text-6xl"
+          class="mt-5 max-w-xl text-4xl font-medium leading-[1.05] tracking-[-0.04em] text-stone-900 sm:text-5xl lg:text-6xl"
         >
           More than coffee.
-          <span class="font-serif italic text-stone-500">
+          <span class="block font-serif italic text-stone-500">
             A moment to slow down.
           </span>
         </h2>
 
-        <div class="mt-7 max-w-lg space-y-5 text-[15px] leading-7 text-stone-600">
+        <div class="mt-7 max-w-lg space-y-5 text-sm leading-7 text-stone-500 sm:text-base">
           <p>
-            At Café Lumière, we believe great coffee deserves more than a
-            rushed moment. Every cup begins with carefully selected beans and
-            ends with an experience designed to be remembered.
+            Café Lumière was created around a simple idea: great coffee should
+            feel unhurried.
           </p>
 
           <p>
-            Inspired by the warmth of Emirati hospitality and the quiet beauty
-            of modern coffee culture, our space brings together thoughtful
-            craft, seasonal flavours, and genuine connection.
+            From carefully selected beans to thoughtful preparation, every
+            detail is designed to create a space where good coffee and good
+            conversation naturally belong together.
           </p>
         </div>
 
-        <div class="mt-9">
-          <a
-            href="#menu"
-            class="inline-flex items-center gap-3 border-b border-stone-900 pb-2 text-sm font-medium text-stone-900 transition hover:border-amber-700 hover:text-amber-700"
-          >
-            Discover our menu
+        <!-- Small stats -->
+        <div class="mt-10 grid max-w-lg grid-cols-2 gap-8 border-t border-stone-200 pt-8">
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </a>
-        </div>
-      </div>
+          <div>
+            <p class="text-2xl font-medium tracking-tight text-stone-900">
+              01
+            </p>
 
-      <!-- Visual composition -->
-      <div class="relative mx-auto w-full max-w-xl">
-        <div
-          class="aspect-[4/5] overflow-hidden rounded-[2rem] bg-stone-900"
-        >
-          <div
-            class="flex h-full items-end bg-[radial-gradient(circle_at_65%_30%,rgba(217,119,6,0.35),transparent_25%),linear-gradient(145deg,#292524,#0c0a09)] p-8 sm:p-10"
-          >
-            <div>
-              <span
-                class="text-xs uppercase tracking-[0.3em] text-amber-300/70"
-              >
-                Est. 2018
-              </span>
-
-              <p
-                class="mt-4 max-w-sm text-3xl font-medium leading-tight tracking-tight text-white sm:text-4xl"
-              >
-                Crafted slowly.
-                <br />
-                Served warmly.
-              </p>
-            </div>
+            <p class="mt-2 text-[10px] uppercase tracking-[0.2em] text-stone-400">
+              Thoughtful space
+            </p>
           </div>
-        </div>
 
-        <!-- Decorative card -->
-        <div
-          class="absolute -bottom-7 -left-5 max-w-[230px] rounded-2xl border border-stone-200 bg-white p-5 shadow-xl sm:-left-8"
-        >
-          <div class="flex items-start gap-3">
-            <span class="text-xl text-amber-700">✦</span>
+          <div>
+            <p class="text-2xl font-medium tracking-tight text-stone-900">
+              100%
+            </p>
 
-            <div>
-              <p class="text-sm font-medium text-stone-900">
-                Thoughtful by nature
-              </p>
-
-              <p class="mt-1 text-xs leading-5 text-stone-500">
-                From bean selection to the final pour, every detail matters.
-              </p>
-            </div>
+            <p class="mt-2 text-[10px] uppercase tracking-[0.2em] text-stone-400">
+              Crafted with care
+            </p>
           </div>
+
         </div>
+
       </div>
 
     </div>

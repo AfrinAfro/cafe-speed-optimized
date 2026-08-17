@@ -1,181 +1,93 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../assets/images/hero.png";
+---
+
 <section
-  id="home"
-  class="relative isolate min-h-screen overflow-hidden bg-stone-950"
+  class="relative isolate min-h-[92svh] overflow-hidden bg-stone-950"
 >
-  <!-- Decorative background -->
+  <!-- Hero image -->
+  <Image
+    src={heroImage}
+    alt="Warm, intimate interior of a modern specialty coffee shop"
+    width={1536}
+    height={1024}
+    class="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+  />
+
+  <!-- Dark overlay -->
   <div
-    class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_35%,rgba(180,83,9,0.22),transparent_32%),radial-gradient(circle_at_20%_80%,rgba(120,53,15,0.18),transparent_30%)]"
+    class="absolute inset-0 -z-10 bg-gradient-to-r from-stone-950 via-stone-950/75 to-stone-950/20"
   ></div>
 
-  <div class="absolute inset-0 -z-10 bg-black/20"></div>
+  <!-- Additional bottom gradient -->
+  <div
+    class="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-stone-950/80 to-transparent"
+  ></div>
 
   <div
-    class="mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-20 pt-32 lg:px-8"
+    class="mx-auto flex min-h-[92svh] max-w-7xl items-end px-6 pb-20 pt-32 sm:pb-24 lg:px-8"
   >
-    <div class="grid w-full items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-      <!-- Hero Content -->
-      <div class="max-w-2xl">
-        <div
-          class="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-sm"
+    <div class="max-w-3xl">
+
+      <!-- Eyebrow -->
+      <p
+        class="mb-6 text-xs font-medium uppercase tracking-[0.32em] text-amber-200/80"
+      >
+        Specialty coffee · Dubai
+      </p>
+
+      <!-- Main heading -->
+      <h1
+        class="max-w-3xl text-5xl font-medium leading-[0.95] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-8xl"
+      >
+        Coffee,
+        <span class="block font-serif italic text-amber-100">
+          thoughtfully crafted.
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p
+        class="mt-7 max-w-xl text-sm leading-7 text-white/65 sm:text-base"
+      >
+        A quiet corner for exceptional coffee, honest ingredients and
+        beautifully unhurried moments.
+      </p>
+
+      <!-- CTA -->
+      <div class="mt-9 flex flex-wrap gap-3">
+
+        <a
+          href="#menu"
+          class="rounded-full bg-white px-7 py-3.5 text-sm font-medium text-stone-950 transition duration-300 hover:bg-amber-100"
         >
-          <span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
+          Explore the Menu
+        </a>
 
-          <span
-            class="text-[11px] font-medium uppercase tracking-[0.22em] text-white/70"
-          >
-            Specialty Coffee · UAE
-          </span>
-        </div>
-
-        <h1
-          class="text-5xl font-medium leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-8xl"
+        <a
+          href="#story"
+          class="rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition duration-300 hover:border-white/40 hover:bg-white/10"
         >
-          Coffee,
-          <span class="block font-serif italic text-amber-200">
-            thoughtfully
-          </span>
-          crafted.
-        </h1>
+          Our Story
+        </a>
 
-        <p
-          class="mt-7 max-w-lg text-base leading-7 text-white/60 sm:text-lg"
-        >
-          A refined coffee experience where exceptional beans, handcrafted
-          pastries, and warm Emirati hospitality come together.
-        </p>
-
-        <div class="mt-9 flex flex-wrap items-center gap-4">
-          <a
-            href="#menu"
-            class="inline-flex items-center rounded-full bg-white px-6 py-3.5 text-sm font-medium text-stone-950 transition hover:bg-amber-100"
-          >
-            Explore Our Menu
-          </a>
-
-          <a
-            href="#story"
-            class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/5"
-          >
-            Discover Our Story
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </a>
-        </div>
-
-        <!-- Small trust indicators -->
-        <div class="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-6">
-          <div>
-            <p class="text-lg font-medium text-white">2018</p>
-            <p class="mt-1 text-xs uppercase tracking-wider text-white/40">
-              Established
-            </p>
-          </div>
-
-          <div>
-            <p class="text-lg font-medium text-white">12+</p>
-            <p class="mt-1 text-xs uppercase tracking-wider text-white/40">
-              Signature Drinks
-            </p>
-          </div>
-
-          <div>
-            <p class="text-lg font-medium text-white">Daily</p>
-            <p class="mt-1 text-xs uppercase tracking-wider text-white/40">
-              Freshly Roasted
-            </p>
-          </div>
-        </div>
       </div>
 
-      <!-- Visual -->
-      <div class="relative mx-auto w-full max-w-lg lg:ml-auto">
-        <div
-          class="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-stone-700 via-stone-900 to-black shadow-2xl"
-        >
-          <!-- Decorative coffee-inspired composition -->
-          <div
-            class="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-amber-200/10"
-          ></div>
-
-          <div
-            class="absolute -bottom-28 -left-20 h-72 w-72 rounded-full border border-white/10"
-          ></div>
-
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="relative">
-              <div
-                class="h-48 w-48 rounded-full bg-gradient-to-br from-amber-200 via-amber-500 to-stone-800 p-3 shadow-[0_30px_80px_rgba(0,0,0,0.45)] sm:h-56 sm:w-56"
-              >
-                <div
-                  class="flex h-full w-full items-center justify-center rounded-full bg-stone-950"
-                >
-                  <div
-                    class="h-28 w-28 rounded-full border border-amber-200/20 bg-[radial-gradient(circle_at_35%_30%,#92400e,#451a03_55%,#0c0a09_75%)] shadow-inner sm:h-32 sm:w-32"
-                  ></div>
-                </div>
-              </div>
-
-              <div
-                class="absolute -bottom-7 -right-8 rounded-full border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md"
-              >
-                <p class="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Roasted
-                </p>
-                <p class="mt-1 text-sm font-medium text-white">
-                  With intention
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="absolute bottom-7 left-7">
-            <p class="text-xs uppercase tracking-[0.25em] text-white/40">
-              The Lumière Collection
-            </p>
-          </div>
-        </div>
-
-        <!-- Floating detail -->
-        <div
-          class="absolute -bottom-5 -left-5 hidden rounded-2xl border border-white/10 bg-stone-900/90 px-5 py-4 shadow-xl backdrop-blur-md sm:block"
-        >
-          <div class="flex items-center gap-3">
-            <span
-              class="flex h-9 w-9 items-center justify-center rounded-full bg-amber-400/10 text-amber-300"
-            >
-              ✦
-            </span>
-
-            <div>
-              <p class="text-xs text-white/40">Today's highlight</p>
-              <p class="mt-0.5 text-sm font-medium text-white">
-                Pistachio Latte
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
   <!-- Scroll indicator -->
   <a
     href="#story"
-    class="absolute bottom-7 left-1/2 hidden -translate-x-1/2 items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-white/40 sm:flex"
+    aria-label="Scroll to our story"
+    class="absolute bottom-8 right-6 hidden items-center gap-3 text-[10px] uppercase tracking-[0.25em] text-white/40 sm:flex lg:right-8"
   >
-    Scroll to explore
+    <span>Scroll</span>
 
-    <span class="h-px w-10 bg-white/20"></span>
+    <span class="h-10 w-px bg-white/20"></span>
   </a>
 </section>

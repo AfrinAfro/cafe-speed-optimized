@@ -1,17 +1,37 @@
+---
+const experiences = [
+  {
+    number: "01",
+    title: "Thoughtful sourcing",
+    description:
+      "We choose specialty beans for character, clarity and a naturally memorable cup.",
+  },
+  {
+    number: "02",
+    title: "Genuine hospitality",
+    description:
+      "Inspired by the warmth of the UAE, every guest should feel welcomed, comfortable and at home.",
+    featured: true,
+  },
+];
+---
+
 <section
   id="experience"
-  class="overflow-hidden bg-stone-950 px-6 py-24 text-white sm:py-32 lg:px-8"
+  class="overflow-hidden bg-[#0d0c0b] px-6 py-24 text-white sm:py-32 lg:px-8"
 >
   <div class="mx-auto max-w-7xl">
 
     <!-- Heading -->
     <div class="max-w-3xl">
-      <p class="text-xs font-medium uppercase tracking-[0.3em] text-amber-300/70">
+      <p
+        class="text-[10px] font-medium uppercase tracking-[0.3em] text-amber-300"
+      >
         The experience
       </p>
 
       <h2
-        class="mt-5 text-4xl font-medium leading-tight tracking-[-0.04em] sm:text-5xl lg:text-7xl"
+        class="mt-5 text-4xl font-medium leading-[1.02] tracking-[-0.045em] sm:text-5xl lg:text-7xl"
       >
         Coffee is only part of
         <span class="font-serif italic text-amber-200">
@@ -20,131 +40,119 @@
       </h2>
     </div>
 
-    <!-- Main composition -->
-    <div class="mt-16 grid gap-5 lg:grid-cols-[1.4fr_0.6fr]">
+    <!-- Experience grid -->
+    <div class="mt-14 grid gap-3 lg:grid-cols-[minmax(0,1fr)_190px]">
 
-      <!-- Large visual -->
-      <div
-        class="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-stone-800 via-stone-900 to-black sm:min-h-[600px]"
+      <!-- Main story card -->
+      <article
+        class="group relative min-h-[390px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#171513]"
       >
         <!-- Ambient light -->
         <div
-          class="absolute -left-24 top-16 h-80 w-80 rounded-full bg-amber-700/20 blur-3xl"
+          class="absolute -left-24 -top-20 h-72 w-72 rounded-full bg-amber-700/20 blur-[90px] transition duration-700 group-hover:bg-amber-600/30"
         ></div>
 
         <div
-          class="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-orange-900/20 blur-3xl"
+          class="absolute -bottom-24 right-10 h-64 w-64 rounded-full bg-orange-900/20 blur-[90px]"
         ></div>
 
-        <!-- Abstract cafe table -->
+        <!-- Abstract coffee ring -->
         <div
-          class="absolute bottom-0 left-0 right-0 h-[38%] bg-gradient-to-t from-black via-stone-950/80 to-transparent"
-        ></div>
-
-        <div
-          class="absolute bottom-[17%] left-1/2 h-52 w-52 -translate-x-1/2 rounded-full border-[18px] border-stone-700/80 bg-gradient-to-br from-amber-300/30 via-amber-800/50 to-stone-950 shadow-[0_35px_100px_rgba(0,0,0,0.6)]"
+          class="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] shadow-[0_0_80px_rgba(245,158,11,0.12)]"
         >
           <div
-            class="absolute inset-5 rounded-full border border-amber-200/10"
+            class="h-20 w-20 rounded-full border border-amber-400/20 bg-amber-700/10"
+          ></div>
+
+          <div
+            class="absolute h-14 w-14 rounded-full border border-amber-300/10"
           ></div>
         </div>
 
-        <!-- Text overlay -->
-        <div class="absolute bottom-8 left-8 right-8 sm:bottom-10 sm:left-10">
-          <span
-            class="text-[10px] uppercase tracking-[0.3em] text-white/40"
+        <!-- Content -->
+        <div class="absolute inset-x-0 bottom-0 p-7 sm:p-9">
+
+          <p
+            class="text-[9px] uppercase tracking-[0.25em] text-white/35"
           >
             01 — Craft
-          </span>
+          </p>
 
-          <h3 class="mt-3 max-w-lg text-2xl font-medium sm:text-3xl">
+          <h3
+            class="mt-3 text-2xl font-medium tracking-tight sm:text-3xl"
+          >
             Every cup begins with intention.
           </h3>
 
-          <p class="mt-3 max-w-md text-sm leading-6 text-white/50">
+          <p
+            class="mt-3 max-w-lg text-xs leading-6 text-white/45 sm:text-sm"
+          >
             From the first aroma to the final pour, our baristas focus on
             balance, detail and consistency.
           </p>
+
         </div>
-      </div>
+      </article>
 
-      <!-- Feature column -->
-      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+      <!-- Side cards -->
+      <div class="grid gap-3">
 
-        <!-- Feature 1 -->
-        <article
-          class="flex min-h-[260px] flex-col justify-between rounded-[2rem] border border-white/10 bg-white/[0.04] p-7"
-        >
-          <div
-            class="flex h-11 w-11 items-center justify-center rounded-full border border-amber-300/20 text-amber-200"
+        {experiences.map((experience) => (
+          <article
+            class:list={[
+              "flex min-h-[190px] flex-col justify-between rounded-[1.5rem] border p-5 sm:p-6",
+              experience.featured
+                ? "border-amber-100/20 bg-amber-100 text-stone-900"
+                : "border-white/10 bg-[#171513] text-white",
+            ]}
           >
-            01
-          </div>
+            <span
+              class:list={[
+                "flex h-6 w-6 items-center justify-center rounded-full border text-[9px]",
+                experience.featured
+                  ? "border-stone-900/10"
+                  : "border-amber-300/30 text-amber-300",
+              ]}
+            >
+              {experience.number}
+            </span>
 
-          <div>
-            <h3 class="text-xl font-medium">
-              Thoughtful sourcing
-            </h3>
+            <div>
+              <h3 class="text-sm font-medium">
+                {experience.title}
+              </h3>
 
-            <p class="mt-3 text-sm leading-6 text-white/45">
-              We choose specialty beans for character, clarity and a naturally
-              memorable cup.
-            </p>
-          </div>
-        </article>
-
-        <!-- Feature 2 -->
-        <article
-          class="flex min-h-[260px] flex-col justify-between rounded-[2rem] bg-amber-100 p-7 text-stone-950"
-        >
-          <div
-            class="flex h-11 w-11 items-center justify-center rounded-full border border-stone-900/10 text-sm"
-          >
-            02
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium">
-              Genuine hospitality
-            </h3>
-
-            <p class="mt-3 text-sm leading-6 text-stone-600">
-              Inspired by the warmth of the UAE, every guest should feel
-              welcomed, comfortable and at home.
-            </p>
-          </div>
-        </article>
+              <p
+                class:list={[
+                  "mt-2 text-[10px] leading-5",
+                  experience.featured
+                    ? "text-stone-600"
+                    : "text-white/40",
+                ]}
+              >
+                {experience.description}
+              </p>
+            </div>
+          </article>
+        ))}
 
       </div>
     </div>
 
     <!-- Bottom statement -->
     <div
-      class="mt-16 flex flex-col gap-5 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between"
+      class="mt-8 flex flex-col gap-5 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between"
     >
-      <p class="max-w-xl text-sm leading-6 text-white/40">
+      <p class="max-w-xl text-xs leading-6 text-white/30">
         A place for the morning ritual, the afternoon conversation and the
         unexpected pause in between.
       </p>
 
       <a
-        href="#contact"
-        class="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-white transition hover:text-amber-200"
+        href="#location"
+        class="shrink-0 text-[10px] font-medium uppercase tracking-[0.2em] text-amber-200 transition hover:text-white"
       >
-        Plan your visit
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          aria-hidden="true"
-        >
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
+        Plan your visit →
       </a>
     </div>
 
